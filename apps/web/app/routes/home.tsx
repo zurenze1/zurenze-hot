@@ -8,6 +8,7 @@ import type { Screen } from "../components/shell/screens";
 import { Timeline } from "../features/feed/Timeline";
 import { HotTopics } from "../features/feed/HotTopics";
 import { ActiveFilters, CategoryTabs, FeedBar, SearchField } from "../features/feed/Filters";
+import { EDITION_TIMES, SITE } from "@aihot/site";
 
 export const handle: Screen = { tab: "featured", name: "精选" };
 export { pageHeaders as headers } from "../lib/api.server";
@@ -35,6 +36,16 @@ export default function Home() {
   const title = filters.tag ? `#${filters.tag}` : "精选";
   return (
     <div className="pb-6">
+      {!filters.tag && !filters.category && filters.channel === "all" && (
+        <section aria-label="个人热点站介绍" className="mb-5 rounded-tile border border-line bg-surface p-5 lg:p-6">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] font-medium text-ink-3">
+            <span className="font-semibold text-accent">祖仁泽的个人热点站</span>
+            <span>北京时间 {EDITION_TIMES.daily} · 每日更新</span>
+          </div>
+          <h2 className="mt-3 text-[22px] font-bold leading-[1.4] tracking-[-0.02em] text-ink lg:text-[28px]">{SITE.tagline}</h2>
+          <p className="mt-2 text-[14px] leading-[1.8] text-ink-3">关注实际影响，保留原始来源，让每一次阅读都能带来新的判断。</p>
+        </section>
+      )}
       {/* Phones: the bar (精选 | 全部, filter, search), the filter in use, today's hot topics, the feed. */}
       <FeedBar base="/" category={filters.category} channel={filters.channel} />
       <ActiveFilters base="/" category={filters.category} channel={filters.channel} tag={filters.tag} />

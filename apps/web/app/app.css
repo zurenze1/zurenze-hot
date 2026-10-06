@@ -6,7 +6,7 @@
 @source "../../../modules/*/{web.tsx,web/**}";
 
 /* ---------------------------------------------------------------------------
-   Design tokens: warm off-white paper, ink text, one teal accent (cyan in
+   Design tokens: warm off-white paper, ink text, one blue accent (lighter blue in
    dark), hairline borders, no gradients.
    Components use the semantic names below; values change per theme only.
    --------------------------------------------------------------------------- */
@@ -88,28 +88,28 @@
   --gutter-l: max(16px, env(safe-area-inset-left));
   --gutter-r: max(16px, env(safe-area-inset-right));
   color-scheme: light;
-  --bg: #faf9f6;
-  --bg-sunk: #f3f3ef;
-  --bg-muted: #e9ede9;
+  --bg: #f6f8fa;
+  --bg-sunk: #f0f3f6;
+  --bg-muted: #eaeef2;
   --surface: #ffffff;
-  --surface-2: #fdfdfb;
+  --surface-2: #ffffff;
   --raised: #ffffff;
-  --sidebar: #fdfdfb;
-  --daybar: #f0f2ee;
-  --field: #eef1ed;
-  --ink: #202a30;
-  --ink-2: #303c42;
-  --ink-3: #59656b;
-  --ink-4: #657176;
-  --line: #dfe4e1;
-  --line-strong: #d1d9d5;
-  --line-soft: #e9ede9;
-  --accent: #176b75;
-  --accent-ink: #145f68;
-  --accent-soft: rgba(23, 107, 117, 0.08);
-  --accent-softer: rgba(23, 107, 117, 0.05);
+  --sidebar: #ffffff;
+  --daybar: #f0f3f6;
+  --field: #f6f8fa;
+  --ink: #1f2328;
+  --ink-2: #32383f;
+  --ink-3: #59636e;
+  --ink-4: #656d76;
+  --line: #d1d9e0;
+  --line-strong: #b7c1cc;
+  --line-soft: #eaeef2;
+  --accent: #0969da;
+  --accent-ink: #0550ae;
+  --accent-soft: rgba(9, 105, 218, 0.08);
+  --accent-softer: rgba(9, 105, 218, 0.05);
   --accent-contrast: #ffffff;
-  --note: #526f72;
+  --note: #59636e;
   --hot: #b3402a;
   --hot-soft: rgba(179, 64, 42, 0.08);
   --amber: #b8873a;
@@ -127,15 +127,15 @@
   --shadow-soft: 0 4px 12px rgba(28, 39, 51, 0.06);
   --shadow-thumb: 0 1px 2px rgba(28, 39, 51, 0.1), 0 1px 1px rgba(28, 39, 51, 0.04);
   --shadow-pop: 0 12px 32px rgba(28, 39, 51, 0.12);
-  --prose-ink: #26323a;
-  --code-bg: #f6f7f4;
-  --code-keyword: #006d77;
+  --prose-ink: #1f2328;
+  --code-bg: #f6f8fa;
+  --code-keyword: #0550ae;
   --code-string: #2f6f44;
   --code-number: #9a6700;
   --code-title: #6f42c1;
   --code-variable: #a13d10;
   --code-meta: #b42348;
-  --selection: rgba(23, 107, 117, 0.16);
+  --selection: rgba(9, 105, 218, 0.16);
 }
 
 @media (min-width: 961px) {
@@ -146,28 +146,28 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg: #13191c;
-  --bg-sunk: #182024;
-  --bg-muted: #202a2f;
-  --surface: #1a2226;
-  --surface-2: #1d272b;
-  --raised: #202a2f;
-  --sidebar: #161e21;
-  --daybar: #182024;
+  --bg: #0d1117;
+  --bg-sunk: #161b22;
+  --bg-muted: #21262d;
+  --surface: #161b22;
+  --surface-2: #1c2128;
+  --raised: #21262d;
+  --sidebar: #010409;
+  --daybar: #161b22;
   --field: rgba(255, 255, 255, 0.06);
-  --ink: #e7eceb;
-  --ink-2: #d2dada;
-  --ink-3: #a5b0b3;
-  --ink-4: #89979d;
+  --ink: #f0f6fc;
+  --ink-2: #d1d9e0;
+  --ink-3: #b1bac4;
+  --ink-4: #9198a1;
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.12);
   --line-soft: rgba(255, 255, 255, 0.06);
-  --accent: #12ccd8;
-  --accent-ink: #2ce2e8;
-  --accent-soft: rgba(18, 204, 216, 0.12);
-  --accent-softer: rgba(18, 204, 216, 0.06);
+  --accent: #58a6ff;
+  --accent-ink: #79c0ff;
+  --accent-soft: rgba(88, 166, 255, 0.12);
+  --accent-softer: rgba(88, 166, 255, 0.06);
   --accent-contrast: #000000;
-  --note: #8fb8a8;
+  --note: #b1bac4;
   --hot: #d86a52;
   --hot-soft: rgba(216, 106, 82, 0.12);
   --amber: #d3b26a;
@@ -193,7 +193,7 @@
   --code-title: #ab9df2;
   --code-variable: #fc9867;
   --code-meta: #ff6188;
-  --selection: rgba(18, 204, 216, 0.22);
+  --selection: rgba(88, 166, 255, 0.22);
 }
 
 @layer base {
